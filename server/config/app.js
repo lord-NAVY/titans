@@ -42,6 +42,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+//setting the routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/book-list', booksRouter);
