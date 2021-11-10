@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <h1>Favourite Books List</h1>
+
+            <!-- FIX THE ADD BUTTON BELOW -->
+            <a href="/book-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Survey</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-1">Survey name</th>
+                    <th class="text-center col-3">Question 1</th>
+                    <th class="text-center col-3">Question 2</th>
+                    <th class="col-2.5">Question 3</th>
+                    <th class="text-center col-3">Question 4</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BookList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= BookList[count].Title%></td>
+                        <td class="text-center col-4"><%= BookList[count].Description %></td>
+                        <td class="text-center col-1"><%= BookList[count].Price%></td>
+                        <td class="col-2"><%= BookList[count].Author %></td>
+                        <td class="text-center col-1"><%= BookList[count].Genre %></td>
+                        <td class="text-center col-1">
+
+                    <!-- ADD the EDIT BUTTON HERE -->
+
+
+                            <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+
+                         <!-- ADD the DELETE BUTTON HERE -->
+                            <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+
+
+
+  
+
+
+
+
+

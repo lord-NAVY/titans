@@ -38,25 +38,10 @@ module.exports.processAddPage = (req, res, next) => {
         "Genre": req.body.Genre,
         "Description": req.body.Description,
         "Price": req.body.Price,
-        "Option1a": req.body.Option1a,
-        "Option2a": req.body.Option2a,
-        "Option3a": req.body.Option3a,
-        "Option4a": req.body.Option4a,
-
-        "Option1b": req.body.Option1b,
-        "Option2b": req.body.Option2b,
-        "Option3b": req.body.Option3b,
-        "Option4b": req.body.Option4b,
-
-        "Option1c": req.body.Option1c,
-        "Option2c": req.body.Option2c,
-        "Option3c": req.body.Option3c,
-        "Option4c": req.body.Option4c,
-
-        "Option1d": req.body.Option1d,
-        "Option2d": req.body.Option2d,
-        "Option3d": req.body.Option3d,
-        "Option4d": req.body.Option4d,
+        "Option1": req.body.Option1,
+        "Option2": req.body.Option2,
+        "Option3": req.body.Option3,
+        "Option4": req.body.Option4
     });
 
     Book.create(newBook, (err, Book) =>{
@@ -101,25 +86,10 @@ module.exports.processEditPage = (req, res, next) => {
         "Genre": req.body.Genre,
         "Description": req.body.Description,
         "Price": req.body.Price,
-        "Option1a": req.body.Option1a,
-        "Option2a": req.body.Option2a,
-        "Option3a": req.body.Option3a,
-        "Option4a": req.body.Option4a,
-
-        "Option1b": req.body.Option1b,
-        "Option2b": req.body.Option2b,
-        "Option3b": req.body.Option3b,
-        "Option4b": req.body.Option4b,
-
-        "Option1c": req.body.Option1c,
-        "Option2c": req.body.Option2c,
-        "Option3c": req.body.Option3c,
-        "Option4c": req.body.Option4c,
-
-        "Option1d": req.body.Option1d,
-        "Option2d": req.body.Option2d,
-        "Option3d": req.body.Option3d,
-        "Option4d": req.body.Option4d,
+        "Option1": req.body.Option1,
+        "Option2": req.body.Option2,
+        "Option3": req.body.Option3,
+        "Option4": req.body.Option4
     });
 
     Book.updateOne({_id: id}, updatedBook, (err) => {
