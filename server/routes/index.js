@@ -13,4 +13,18 @@ router.get('/', (req, res, next) => {
         books: ''
     });
 });
+router.get('/create', (req, res, next) => {
+    res.render('content/create', {
+        title: 'Create A Survey',
+        page: 'create',
+        books: ''
+    });
+});
+router.get('/contact', (req, res, next) => {
+    res.render('content/contact', {
+        title: 'Contact Us',
+        page: 'contact',
+        books: ''
+    });
+});
 //# sourceMappingURL=index.js.map
