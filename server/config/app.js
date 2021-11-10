@@ -1,66 +1,63 @@
-/* app.js
-Students's name: Arshpreet Singh
-StudentID: 301174738
-Date: 31 October, 2021
-Web app name: COMP229-F2021-MidTerm-301174738
-*/
-
-// installed 3rd party packages
-let createError = require('http-errors');
-let express = require('express');
-let path = require('path');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
-
-// database setup
-let mongoose = require('mongoose');
-let DB = require('./db');
-
-// point mongoose to the DB URI
-mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
-
-let mongoDB = mongoose.connection;
-mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
-mongoDB.once('open', ()=>{
-  console.log('Connected to MongoDB...');
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
 });
-
-let indexRouter = require('../routes/index');
-let usersRouter = require('../routes/users');
-let booksRouter = require('../routes/book');
-
-let app = express();
-
-// view engine setup
-app.set('views', path.join(__dirname, '../views'));
-app.set('view engine', 'ejs'); // express  -e
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../../public')));
-app.use(express.static(path.join(__dirname, '../../node_modules')));
-
-//setting the routers
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/book-list', booksRouter);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const http_errors_1 = __importDefault(require("http-errors"));
+const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const morgan_1 = __importDefault(require("morgan"));
+const mongoose_1 = __importDefault(require("mongoose"));
+const DBConfig = __importStar(require("./db"));
+mongoose_1.default.connect(process.env.URI || DBConfig.RemoteURI, { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose_1.default.connection;
+db.on("error", function () {
+    console.error("connection error");
 });
-
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error', { title: 'Error'});
+db.once("open", function () {
+    console.log(`Connected to MongoDB at: ${DBConfig.HostName}`);
 });
-
-module.exports = app;
+const index_1 = __importDefault(require("../Routes/index"));
+const books_1 = __importDefault(require("../Routes/books"));
+const app = express_1.default();
+exports.default = app;
+app.set('views', path_1.default.join(__dirname, '../Views'));
+app.set('view engine', 'ejs');
+app.use(morgan_1.default('dev'));
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: false }));
+app.use(cookie_parser_1.default());
+app.use(express_1.default.static(path_1.default.join(__dirname, '../../Client')));
+app.use(express_1.default.static(path_1.default.join(__dirname, '../../node_modules')));
+app.use('/', index_1.default);
+app.use('/books', books_1.default);
+app.use(function (req, res, next) {
+    next(http_errors_1.default(404));
+});
+app.use(function (err, req, res, next) {
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+    res.status(err.status || 500);
+    res.render('error');
+});
+//# sourceMappingURL=app.js.map
