@@ -1,0 +1,174 @@
+<%- include('../partials/header.ejs'); %>
+
+<%- include ../partials/main_nav.ejs %>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="titleTextField">Survey name</label>
+                <input type="text" class="form-control" id="titleTextField"
+                placeholder="Book Name" name="Title" value="<%= book.Title %>" required>
+              </div>
+               
+              <div class="form-group">
+                <label for="descriptionTextField">Question 1</label>
+               <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the a brief description of the book"
+                    name="Description" required><%= book.Description%> </textarea>
+              </div>
+
+              <!--Options for question 1-->
+                 <div class="form-group">
+                    <label for="Option1aTextArea">Option 1</label>
+                    <textarea type="text" class="form-control"
+                    id="Option1aTextArea"
+                    placeholder="Option 1"
+                    name="Option1a" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option2aTextArea">Option 2</label>
+                    <textarea type="text" class="form-control"
+                    id="Option2aTextArea"
+                    placeholder="Option 2"
+                    name="Option2a" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option3aTextArea">Option 3</label>
+                    <textarea type="text" class="form-control"
+                    id="Option3aTextArea"
+                    placeholder="Option 3"
+                    name="Option3a" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option4aTextArea">Option 4</label>
+                    <textarea type="text" class="form-control"
+                    id="Option4aTextArea"
+                    placeholder="Option 4"
+                    name="Option4a" required></textarea>
+                </div>
+                <!--Options for question1 1 end-->
+
+                 <div class="form-group">
+                <label for="priceTextField">Question 2</label>
+                <input type="text" class="form-control" id="priceTextField"
+                placeholder="Book Price" name="Price" value="<%= book.Price %>"  required>
+              </div>
+              
+              <!--Options for question 2-->
+                 <div class="form-group">
+                    <label for="Option1bTextArea">Option 1</label>
+                    <textarea type="text" class="form-control"
+                    id="Option1bTextArea"
+                    placeholder="Option 1"
+                    name="Option1b" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option2bTextArea">Option 2</label>
+                    <textarea type="text" class="form-control"
+                    id="Option2bTextArea"
+                    placeholder="Option 2"
+                    name="Option2b" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option3bTextArea">Option 3</label>
+                    <textarea type="text" class="form-control"
+                    id="Option3bTextArea"
+                    placeholder="Option 3"
+                    name="Option3b" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option4bTextArea">Option 4</label>
+                    <textarea type="text" class="form-control"
+                    id="Option4bTextArea"
+                    placeholder="Option 4"
+                    name="Option4b" required></textarea>
+                </div>
+                <!--Options for question 2 end-->
+
+              <div class="form-group">
+                <label for="authorTextField">Question 3</label>
+                <input type="text" class="form-control" id="authorTextField"
+                placeholder="Book Author" name="Author" value="<%= book.Author %>"  required>
+              </div>
+
+               <!--Options for question 3-->
+                 <div class="form-group">
+                    <label for="Option1cTextArea">Option 1</label>
+                    <textarea type="text" class="form-control"
+                    id="Option1cTextArea"
+                    placeholder="Option 1"
+                    name="Option1c" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option2cTextArea">Option 2</label>
+                    <textarea type="text" class="form-control"
+                    id="Option2cTextArea"
+                    placeholder="Option 2"
+                    name="Option2c" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option3cTextArea">Option 3</label>
+                    <textarea type="text" class="form-control"
+                    id="Option3cTextArea"
+                    placeholder="Option 3"
+                    name="Option3c" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option4cTextArea">Option 4</label>
+                    <textarea type="text" class="form-control"
+                    id="Option4cTextArea"
+                    placeholder="Option 4"
+                    name="Option4c" required></textarea>
+                </div>
+                <!--Options for question 3 end-->
+
+                  <div class="form-group">
+                <label for="genreTextField">Question 4</label>
+                <input type="text" class="form-control" id="genreTextField"
+                placeholder="Book Genre" name="Genre" value="<%= book.Genre%>"  required>
+              </div>
+
+               <!--Options for question 4-->
+                 <div class="form-group">
+                    <label for="Option1dTextArea">Option 1</label>
+                    <textarea type="text" class="form-control"
+                    id="Option1dTextArea"
+                    placeholder="Option 1"
+                    name="Option1d" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option2dTextArea">Option 2</label>
+                    <textarea type="text" class="form-control"
+                    id="Option2dTextArea"
+                    placeholder="Option 2"
+                    name="Option2d" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option3dTextArea">Option 3</label>
+                    <textarea type="text" class="form-control"
+                    id="Option3dTextArea"
+                    placeholder="Option 3"
+                    name="Option3d" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="Option4dTextArea">Option 4</label>
+                    <textarea type="text" class="form-control"
+                    id="Option4dTextArea"
+                    placeholder="Option 4"
+                    name="Option4d" required></textarea>
+                </div>
+                <!--Options for question 4 end-->
+           
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/book-list" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+

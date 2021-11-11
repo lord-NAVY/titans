@@ -1,0 +1,42 @@
+<%- include('../partials/header.ejs'); %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1>Add Question</h1>
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="NameTextField">Question</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Question Survey" name="question" value="<%= books.Question %>" required>
+              </div>
+              <div class="form-group">
+                <label for="PriceTextField">Option A</label>
+                <input type="text" class="form-control" id="PriceTextField"
+                placeholder="Answer A" name="optiona" value="<%= books.OptionA %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="AuthorTextField">Option B</label>
+                <input type="text" class="form-control" id="AuthorTextField"
+                placeholder="Answer B" name="optionb" value="<%= books.OptionB %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="GenreTextField">Option C</label>
+                <input type="text" class="form-control" id="GenreTextField"
+                placeholder="Answer C" name="optionc" value="<%= books.OptionC %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="GenreTextField">Option D</label>
+                <input type="text" class="form-control" id="GenreTextField"
+                placeholder="Answer D" name="optiond" value="<%= books.OptionD %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<%- include('../partials/footer.ejs'); %>
