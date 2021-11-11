@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs'); %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <h3>Survey Questions List</h3>
+          <a href="/books/add" id="addBook" class="btn btn-primary"><i class="fa fa-plus"></i> Add Question</a>
+          <br>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th class="text-center">A</th>
+                  <th class="text-center">B</th>
+                  <th class="text-center">C</th>
+                  <th class="text-center">D</th>
+                  <th class="text-center"></th>
+                  <th class="text-center"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Template Row -->
+                <% for (let count = 0; count < books.length; count++) { %>
+                <tr>
+                  <td><%= books[count].Question %></td>
+                  <td class="text-center"><%= books[count].OptionA %></td>
+                  <td class="text-center"><%= books[count].OptionB %></td>
+                  <td class="text-center"><%= books[count].OptionC %></td>
+                  <td class="text-center"><%= books[count].OptionD %></td>
+                  
+                  <td class="text-center">
+                    <a href="/books/<%=books[count]._id %>" class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i></a> Edit</a>
+                  </td>
+
+                  <td class="text-center">
+                    <a href="/books/delete/<%=books[count]._id %>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a> Delete</a>
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<%- include('../partials/footer.ejs'); %>
+
+

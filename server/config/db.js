@@ -1,12 +1,8 @@
-/* db.js
-Students's name: Arshpreet Singh
-StudentID: 301174738
-Date: 31 October, 2021
-Web app name: COMP229-F2021-MidTerm-301174738
-*/
-
-module.exports = 
-{
-   "URI": "mongodb://localhost/book_store"
-  // "URI":"mongodb+srv://arsh:CnjTa*@43$H9WuW@midtermdb.vure1.mongodb.net/books229?retryWrites=true&w=majority"
-}
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Secret = exports.HostName = exports.RemoteURI = exports.LocalURI = void 0;
+exports.LocalURI = "mongodb://localhost/books229";
+exports.RemoteURI = "mongodb+srv://theskynetz:Rosa2745@comp229-midterm.fiiu9.mongodb.net/books229?retryWrites=true&w=majority";
+exports.HostName = "RemoteHost";
+exports.Secret = "someSecret";
+//# sourceMappingURL=db.js.map
