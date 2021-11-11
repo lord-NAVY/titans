@@ -6,11 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 const BookSchema = new Schema({
-    Title: String,
+    Question: String,
     Description: String,
-    Price: Number,
-    Author: String,
-    Genre: String
+    OptionA: String,
+    OptionB: String,
+    OptionC: String,
+    OptionD: String
 }, {
     collection: "books"
 });

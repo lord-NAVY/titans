@@ -4,11 +4,12 @@ const Schema = mongoose.Schema; // Schema alias
 // create a model class
 const BookSchema = new Schema
 ({
-    Title: String,
+    Question: String,
     Description: String,
-    Price: Number,
-    Author: String,
-    Genre: String
+    OptionA: String,
+    OptionB: String,
+    OptionC: String,
+    OptionD: String
 },
 {
   collection: "books"

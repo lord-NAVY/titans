@@ -33,11 +33,11 @@ router.get('/add', (req, res, next) => {
 });
 router.post('/add', (req, res, next) => {
     let newBook = new books_1.default({
-        "Title": req.body.title,
-        "Price": req.body.price,
-        "Author": req.body.author,
-        "Description": req.body.description,
-        "Genre": req.body.genre
+        "Question": req.body.question,
+        "OptionA": req.body.optionA,
+        "OptionB": req.body.optionB,
+        "OptionC": req.body.optionC,
+        "OptionD": req.body.optionD
     });
     books_1.default.create(newBook, (err) => {
         if (err) {
@@ -61,11 +61,11 @@ router.post('/:id', (req, res, next) => {
     let id = req.params.id;
     let updatedBook = new books_1.default({
         "_id": id,
-        "Title": req.body.title,
-        "Description": req.body.description,
-        "Price": req.body.price,
-        "Author": req.body.author,
-        "Genre": req.body.genre
+        "Question": req.body.question,
+        "OptionA": req.body.optionA,
+        "OptionB": req.body.optionB,
+        "OptionC": req.body.optionC,
+        "OptionD": req.body.optionD
     });
     books_1.default.updateOne({ _id: id }, updatedBook, {}, (err) => {
         if (err) {

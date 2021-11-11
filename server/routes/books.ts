@@ -38,13 +38,13 @@ router.get('/add', (req, res, next) => {
      *****************/
      let emptyBook = new book
      ({
-      "title": "",
-      "description": "",
-      "price": "",
-      "author": "",
-      "genre": ""
+      "Question": "",
+      "OptionA": "",
+      "OptionB": "",
+      "OptionC": "",
+      "OptionD": ""
     });
-    res.render('books/details', {title: 'Add Book', page:'Add Book', books: emptyBook})
+    res.render('books/details', {title: 'Add Question', page:'Add Question', books: emptyBook})
 
 });
 
@@ -57,11 +57,11 @@ router.post('/add', (req, res, next) => {
 
      let newBook = new book
      ({
-      "Title": req.body.title,
-      "Price": req.body.price,
-      "Author": req.body.author,
-      "Description": req.body.description,
-      "Genre": req.body.genre
+      "Question": req.body.question,
+      "OptionA": req.body.optionA,
+      "OptionB": req.body.optionB,
+      "OptionC": req.body.optionC,
+      "OptionD": req.body.optionD
      });
      
      book.create(newBook, (err) => {
@@ -95,7 +95,7 @@ router.get('/:id', (req, res, next) => {
          }
  
          // show the edit view
-         res.render('./books/details.ejs', { title: 'Edit Book', page: 'Edit Book', books: bookToEdit});
+         res.render('./books/details.ejs', { title: 'Edit Question', page: 'Edit Question', books: bookToEdit});
      });
  });
 
@@ -109,11 +109,11 @@ router.post('/:id', (req, res, next) => {
     let updatedBook = new book
     ({
       "_id": id,
-      "Title": req.body.title,
-      "Description": req.body.description,
-      "Price": req.body.price,
-      "Author": req.body.author,
-      "Genre": req.body.genre
+      "Question": req.body.question,
+      "OptionA": req.body.optionA,
+      "OptionB": req.body.optionB,
+      "OptionC": req.body.optionC,
+      "OptionD": req.body.optionD
     });
   
     // find the books via db.books.update({"_id":id}) and then update
