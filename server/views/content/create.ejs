@@ -1,166 +1,130 @@
 <%- include('../partials/header.ejs'); %>
+  <form action="/books/add" method="post" novalidate>
     <div class="container">
-      <div class="row">
-        <div class="col-md-offset-3 col-md-6">
-          <h1>Create A Survey</h1>
-            
-            <div class="form-group row mb-4 mt-4 ">
-		<input class="form-control form-control-lg inputBackground" type="text" placeholder="Survey Name" id="title" name="title" required="">
-	</div>
-
-            <!-- Start and End Survey Date !-->
-            <div class="form-group row justify-content-md-center mb-4"><a>Start Date</a>
-		<input class="col-md-4 form-control form-control-lg inputBackground" type="date" id="startDate" name="startDate" required="">
-	        </div>
-
-            <div class="form-group row justify-content-md-center mb-4"><a>End Date</a>
-		<input class="col-md-4 form-control form-control-lg inputBackground" type="date" id="endDate" name="endDate" required="">
-	        </div>
-
-            <!-- Questions List !-->
-            <div class="form-group row justify-content-around mb-md-5">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Question 1" id="question1" name="question1" required="">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" placeholder="Option A" name="answerA" id="optionA" value="optionA"  required="" checked>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerB" id="optionB" value="optionB" checked>
-                <label class="form-check-label" for="optionB">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerC" id="optionC" value="optionC" checked>
-                <label class="form-check-label" for="optionC">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerD" id="optionD" value="optionD" checked>
-                <label class="form-check-label" for="optionD">
-                 Default radio
-                </label>
-            </div>
-	</div>
-
- <div class="form-group row justify-content-around mb-md-5">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Question 2" id="question2" name="question2" required="">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Answer 1" id="Answer1Question2" name="Answer 1" required="">
-            <!--<div class="form-check">
-                <input class="form-check-input" type="radio" name="answerA" id="optionA" value="optionA" checked>
-                <label class="form-check-label" for="optionA">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerB" id="optionB" value="optionB" checked>
-                <label class="form-check-label" for="optionB">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerC" id="optionC" value="optionC" checked>
-                <label class="form-check-label" for="optionC">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerD" id="optionD" value="optionD" checked>
-                <label class="form-check-label" for="optionD">
-                 Default radio
-                </label>
-            </div>-->
-
-	</div>
-
- <div class="form-group row justify-content-around mb-md-5">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Question 3" id="question3" name="question3" required="">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerA" id="optionA" value="optionA" checked>
-                <label class="form-check-label" for="optionA">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerB" id="optionB" value="optionB" checked>
-                <label class="form-check-label" for="optionB">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerC" id="optionC" value="optionC" checked>
-                <label class="form-check-label" for="optionC">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerD" id="optionD" value="optionD" checked>
-                <label class="form-check-label" for="optionD">
-                 Default radio
-                </label>
-            </div>
-	</div>
-
- <div class="form-group row justify-content-around mb-md-5">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Question 4" id="question4" name="question4" required="">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerA" id="optionA" value="optionA" checked>
-                <label class="form-check-label" for="optionA">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerB" id="optionB" value="optionB" checked>
-                <label class="form-check-label" for="optionB">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerC" id="optionC" value="optionC" checked>
-                <label class="form-check-label" for="optionC">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerD" id="optionD" value="optionD" checked>
-                <label class="form-check-label" for="optionD">
-                 Default radio
-                </label>
-            </div>
-	</div>
-
- <div class="form-group row justify-content-around mb-md-5">
-		<input class="form-control col-md-5 form-control-lg inputBackground" type="text" placeholder="Question 5" id="question5" name="question5" required="">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerA" id="optionA" value="optionA" checked>
-                <label class="form-check-label" for="optionA">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerB" id="optionB" value="optionB" checked>
-                <label class="form-check-label" for="optionB">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerC" id="optionC" value="optionC" checked>
-                <label class="form-check-label" for="optionC">
-                 Default radio
-                </label>
-            </div>
-                        <div class="form-check">
-                <input class="form-check-input" type="radio" name="answerD" id="optionD" value="optionD" checked>
-                <label class="form-check-label" for="optionD">
-                 Default radio
-                </label>
-            </div>
-	</div>
-
-
-           <button type="submit" class="btn btn-lg btn-success m-3">Submit</button>
-           <a class="btn btn-lg btn-danger m-3" href="/">Cancel</a>
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6">
+            <h1>Create A Survey</h1>
+              
+              <div class="form-group row mb-4 mt-4 ">
+          <input class="  inputBackground" type="text" placeholder="Survey Name" id="title" name="title" required="">
+      </div>
+      <p>Type of question</p>
+      <select class="form-select" id="typeQuestion" aria-label="Default select example">
+          <option >True/ False</option>
+          <option >MCQ</option>
+        </select>
+         <!-- Start and End Survey Date !-->
+              <div class="form-group row justify-content-md-center mb-4"><a>Start Date</a>
+                  <input class="col-md-4   inputBackground" type="date" id="startDate" name="startDate" required="">
+              </div>
+  
+              <div class="form-group row justify-content-md-center mb-4"><a>End Date</a>
+                  <input class="col-md-4   inputBackground" type="date" id="endDate" name="endDate" required="">
+              </div>
+  
+           <div id="mcq">
+              <div class="accordion" id="accordionExample">
+                  <% for( let index = 0; index < 4; index++ ) { %>
+               
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                          question Item #<%= index %>
+                        </button>
+                      </h2>
+                      <div id="collapse<%= index %>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="form-group row justify-content-around mb-md-5">
+                              <input class=" col-md-5  inputBackground" type="text" placeholder="Question 4" id="question<%= index %>" name="question<%= index %>" required="">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="answer<%= index %>" id="option<%= index %>A" value="optionA" checked>
+                                      <label class="form-check-label" for="option<%= index %>A">
+                                       Default radio
+                                      </label>
+                                  </div>
+                                              <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="answer<%= index %>" id="option<%= index %>B" value="optionB" checked>
+                                      <label class="form-check-label" for="option<%= index %>B">
+                                       Default radio
+                                      </label>
+                                  </div>
+                                              <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="answer<%= index %>" id="option<%= index %>C" value="optionC" checked>
+                                      <label class="form-check-label" for="option<%= index %>C">
+                                       Default radio
+                                      </label>
+                                  </div>
+                                              <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="answer<%= index %>" id="option<%= index %>D" value="optionD" checked>
+                                      <label class="form-check-label" for="option<%= index %>D">
+                                       Default radio
+                                      </label>
+                                  </div>
+                          </div>
+                                
+                                </div>
+                      </div>
+                    </div>
+               <% } %>
+              </div>
+                   
+       
+          </div>
+           <div id="TF">
+               
+              <div class="accordion" id="accordionExample">
+               <% for( let index = 0; index < 4; index++ ) { %>
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="true" aria-controls="collapse<%= index %>">
+                          question #<%= index %> 
+                        </button>
+                      </h2>
+                      <div id="collapse<%= index %>" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group row justify-content-around mb-md-5">
+                                <input class=" col-md-5  inputBackground" type="text" placeholder="Question <%= index %>" id="question<%= index %>" name="question<%= index %>" required="">                                                              
+                              </div>
+                              <input type="radio" id="TRUE<%= index %>" name="BOOL<%= index %>" value="TRUE">
+                                <label for="TRUE">TRUE</label><br>
+                                <input type="radio" id="FALSE<%= index %>" name="BOOL<%= index %>" value="FALSE">
+                                <label for="FALSE">FALSE</label><br>
+                              
+                                
+                          </div>
+                      </div>
+                    </div>
+               <% } %>
+              </div>
+           </div>
+  
+  
+             <button type="submit" class="btn btn btn-success m-3">Submit</button>
+             <a class="btn btn btn-danger m-3" href="/">Cancel</a>
+          </div>
         </div>
       </div>
-    </div>
-<%- include('../partials/footer.ejs'); %>
+  </form>
+    <%- include('../partials/footer.ejs'); %>
+    <script >
+        let currentType = "TF"
+        function handleShow(){
+            if(currentType == 'TF') {
+               currentType = "mcq"
+               $('#TF').show()
+               $('#mcq').hide()
+
+            }else {
+                currentType = "TF"
+                $('#TF').hide()
+                $('#mcq').show()
+          
+            }
+        }
+       $('#typeQuestion').on('change', function(e) {
+        
+        handleShow()
+        
+       })
+       handleShow()
+    </script>
