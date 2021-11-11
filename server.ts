@@ -1,5 +1,5 @@
 import createError from 'http-errors';
-import app from './titans/Server/Config/app';
+import app from './Server/Config/app';
 import debug from 'debug';
 debug('comp308-m2021-midterm:server');
 import http from 'http';
