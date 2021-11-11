@@ -1,0 +1,21 @@
+{
+    "books":
+    [
+        {
+            "Title" : "Dune",
+            "Author" : "Frank Herbert",
+            "Description" : "Set in the distant future amidst a feudal interstellar society in which various noble houses control planetary fiefs, Dune tells the story of young Paul Atreides, whose family accepts the stewardship of the planet Arrakis.                                        ",
+            "Genre": "Science Fiction",
+            "Price" : 10.95
+        },
+
+        {
+            "Title" : "Dune 2",
+            "Author" : "Frank Herbert",
+            "Description" : "Set in the distant future amidst a feudal interstellar society in which various noble houses control planetary fiefs, Dune tells the story of young Paul Atreides, whose family accepts the stewardship of the planet Arrakis.                                        ",
+            "Genre": "Science Fiction",
+            "Price" : 10.95
+        }
+
+    ]
+}
