@@ -23,13 +23,13 @@ router.get('/', (req, res, next) => {
 });
 router.get('/add', (req, res, next) => {
     let emptyBook = new books_1.default({
-        "title": "",
-        "description": "",
-        "price": "",
-        "author": "",
-        "genre": ""
+        "Question": "",
+        "OptionA": "",
+        "OptionB": "",
+        "OptionC": "",
+        "OptionD": ""
     });
-    res.render('books/details', { title: 'Add Book', page: 'Add Book', books: emptyBook });
+    res.render('books/details', { title: 'Add Question', page: 'Add Question', books: emptyBook });
 });
 router.post('/add', (req, res, next) => {
     let newBook = new books_1.default({
@@ -54,7 +54,7 @@ router.get('/:id', (req, res, next) => {
             console.error(err);
             res.end(err);
         }
-        res.render('./books/details.ejs', { title: 'Edit Book', page: 'Edit Book', books: bookToEdit });
+        res.render('./books/details.ejs', { title: 'Edit Question', page: 'Edit Question', books: bookToEdit });
     });
 });
 router.post('/:id', (req, res, next) => {
