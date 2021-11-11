@@ -1,0 +1,86 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container-fluid">
+    <div class="container-fluid">
+        <div class="offset-md-1 col-md-11">
+            <h1>Favourite Books List</h1>
+
+            <!-- FIX THE ADD BUTTON BELOW -->
+            <a href="/book-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Survey</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Survey name</th>
+                    <th class="text-center col-2">Question 1</th>
+                    <th class="text-center col-2">Question 2</th>
+                    <th class="text-center col-2">Question 3</th>
+                    <th class="text-center col-2">Question 4</th>
+                    <th class="text-center col-1"></th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BookList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= BookList[count].Title%></td>
+
+                        <td class="text-center col-2"><%= BookList[count].Description%>
+                        <br><br>Option 1: <%= BookList[count].Option1a%><br>
+                        Option 2: <%= BookList[count].Option2a%><br>
+                        Option 3: <%= BookList[count].Option3a%><br>
+                        Option 4: <%= BookList[count].Option4a%></td>
+
+                        <td class="text-center col-2"><%= BookList[count].Price%>
+                         <br><br>Option 1: <%= BookList[count].Option1b%><br>
+                        Option 2: <%= BookList[count].Option2b%><br>
+                        Option 3: <%= BookList[count].Option3b%><br>
+                        Option 4: <%= BookList[count].Option4b%></td>
+
+                        <td class="text-center col-2"><%= BookList[count].Author %>
+                         <br><br>Option 1: <%= BookList[count].Option1a%><br>
+                        Option 2: <%= BookList[count].Option2c%><br>
+                        Option 3: <%= BookList[count].Option3c%><br>
+                        Option 4: <%= BookList[count].Option4c%></td>
+
+                        <td class="text-center col-2"><%= BookList[count].Genre %>
+                         <br><br>Option 1: <%= BookList[count].Option1a%><br>
+                        Option 2: <%= BookList[count].Option2d%><br>
+                        Option 3: <%= BookList[count].Option3d%><br>
+                        Option 4: <%= BookList[count].Option4d%></td>
+
+                        <td class="text-center col-1">
+
+                    <!-- ADD the EDIT BUTTON HERE -->
+
+
+                            <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+
+                         <!-- ADD the DELETE BUTTON HERE -->
+                            <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+
+
+
+  
+
+
+
+
+

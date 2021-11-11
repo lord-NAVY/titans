@@ -1,0 +1,26 @@
+<!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/"><i class="fa fa-bookmark-o"></i> <img src="images/LOGO.png" Survey Factory</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+           <% if(title == "Home") { %>
+          <li class="active"><a href="/"><i class="fa fa-home fa-lg"></i> Home   &nbsp; &nbsp; </a></li>
+        <% } else { %>
+          <li><a href="/"><i class="fa fa-home fa-lg"></i> Home &nbsp; &nbsp;   </a></li>
+        <% } %>
+
+          <% if(title == "books") { %>
+          <li class="active"><a href="/books"><i class="fa fa-book fa-lg">
+          </i>    Survey List</a></li>
+          <% } else { %>
+            <li><a href="/book-list"><i class="fa fa-book fa-lg">
+            </i>   Survey List</a></li>
+          <% } %>
+</ul>
+    </div>
+  </nav>
