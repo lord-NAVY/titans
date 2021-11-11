@@ -8,5 +8,5 @@ Web app name: COMP229-F2021-MidTerm-301174738
 module.exports = 
 {
    //"URI": "mongodb://localhost/book_store"
-  "URI":"mongodb+srv://arsh:a5735ijj@cluster0.7ibwx.mongodb.net/surveyList?retryWrites=true&w=majority"
+  "URI":"mongodb+srv://arsh:a5735ijj@cluster0.7ibwx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
