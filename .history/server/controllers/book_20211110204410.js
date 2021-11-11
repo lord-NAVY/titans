@@ -58,8 +58,8 @@ module.exports.processAddPage = (req, res, next) => {
         "Option3d": req.body.Option3d,
         "Option4d": req.body.Option4d,
         
-        "startDate": new Date(),
-        "endDate":  new Date()
+        "startDate": req.body.startDate,
+        "endDate": req.body.endDate
     });
 
     Book.create(newBook, (err, Book) =>{
@@ -125,8 +125,8 @@ module.exports.processEditPage = (req, res, next) => {
         "Option3d": req.body.Option3d,
         "Option4d": req.body.Option4d,
 
-        "startDate": new Date(),
-        "endDate":  new Date()
+        "startDate": req.body.startDate,
+        "endDate": req.body.endDate
     });
 
     Book.updateOne({_id: id}, updatedBook, (err) => {

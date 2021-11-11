@@ -38,7 +38,7 @@ let bookModel = mongoose.Schema({
     endDate: Date
 },
 {
-    collection: "surveys"
+    collection: "books"
 });
 
 module.exports = mongoose.model('Book', bookModel);

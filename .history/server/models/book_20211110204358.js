@@ -34,11 +34,11 @@ let bookModel = mongoose.Schema({
     Option3d: String,
     Option4d: String,
 
-    startDate: Date,
-    endDate: Date
+    startDate: String,
+    endDate: String
 },
 {
-    collection: "surveys"
+    collection: "books"
 });
 
 module.exports = mongoose.model('Book', bookModel);
